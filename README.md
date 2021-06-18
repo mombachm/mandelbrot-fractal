@@ -5,7 +5,7 @@
 ##### Comando para compilação: ```gcc main.c -o main -lpthread -lm```
 
 #### Fractal gerado:
-![](https://github.com/mombachm/fractal-mandelbrot/blob/main/output.jpg?raw=true)
+![](https://github.com/mombachm/mandelbrot-fractal/blob/main/output.jpg?raw=true)
 
 
 
