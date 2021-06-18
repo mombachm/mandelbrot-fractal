@@ -62,17 +62,17 @@ void *calc_mandelbrot_fractal(void *arg){
     int i,j; /* contadores do pixel */
     int k; /* contador de iteração */
     
-    for (j = threadStart; j < threadEnd; j++) {
+    for (j = threadStart; j < threadEnd; j++) { // iterando no eixo Y o número de pixels correspondente ao quadrante da thread
         
-      y = ymax - j * dy;
-      for(i = 0; i < xres; i++) {
+      y = ymax - j * dy; // calcula o altura imaginária do pixel
+      for(i = 0; i < xres; i++) { // iterando no eixo X o número de pixels correspondente ao quadrante da thread
         double u = 0.0;
         double v = 0.0;
         double u2 = pow(u, 2);
         double v2 = pow(v, 2);
-        x = xmin + i * dx;
+        x = xmin + i * dx; // calcula a largura imaginário do pixel
         /* itera o ponto */
-        for (k = 1; k < maxCount && (u2 + v2 < 4.0); k++) {
+        for (k = 1; k < maxCount && (u2 + v2 < 4.0); k++) { // itera k até o número máximo de iterações definida ou até alcançar o limite da janela
           v = 2 * u * v + y;
           u = u2 - v2 + x;
           u2 = pow(u, 2);
